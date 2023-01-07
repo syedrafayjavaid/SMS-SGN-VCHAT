@@ -12,6 +12,11 @@ const server = app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
 });
 
+
+app.get('/', (req, res) => {
+  res.send('SMS SGN Video chat bakend is live')
+})
+
 const peerServer = ExpressPeerServer(server, {
   debug: true
 });
